@@ -1,19 +1,20 @@
 //Leetcode 217
 
 function hasDuplicate(nums) {
-    let dict = {};
+    let numberCount = {};
 
     for (let i = 0; i < nums.length; i++) {
-        var num = nums[i]
-       
-        if (num in dict) {
-            return true
-        }
+        let num = nums[i];
 
-        dict[num] = 1
+        if (num in numberCount) {
+            return true;
+        }
+        else {
+            numberCount[num] = 1;
+        }
     }
-    
-    return false
+
+    return false;
 }
 
 //Test 1:

@@ -5,17 +5,17 @@ function maxProfit(prices) {
     let right = 1;
     let maxProfit = 0;
 
-    while (right < prices.length) {
+    while(right < prices.length) {
         if (prices[left] < prices[right]) {
-            let profit = prices[right] - prices[left];
-            maxProfit = Math.max(maxProfit, profit);
+            let currentMax = prices[right] - prices[left];
+            maxProfit = Math.max(maxProfit, currentMax);
         }
         else {
-            left = right
+            left = right;
         }
 
         right++;
-    }    
+    }
 
     return maxProfit;
 }

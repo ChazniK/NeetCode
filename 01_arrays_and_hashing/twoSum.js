@@ -1,19 +1,17 @@
 //Leetcode 1
 
 function twoSum(nums, target) {
-    let numDict = {}
+    let numberDict = {}
 
-    for (let i = 0; i < nums.length; i++) {
-        let currentNum = nums[i];
-        let numberWanted = target - currentNum;
+    for(let i = 0; i < nums.length; i++) {
+        let number = nums[i];
+        let difference = target - number;
 
-        if (numberWanted in numDict) {
-            return [numDict[numberWanted], i]
+        if (difference in numberDict) {
+            return [numberDict[difference], i]
         }
-
-        if (!(currentNum in numDict)) {
-            numDict[currentNum] = i
-        }
+        
+        numberDict[i] = number;
     }
 }
 
